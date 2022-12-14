@@ -1,4 +1,7 @@
 <?php
+ini_set('display_errors', '1');
+ini_set('display_startup_errors', '1');
+error_reporting(E_ALL);
 session_start();
 if((!isset($_SESSION['user'])) ||(!isset($_SESSION['pass'])) || (!isset($_SESSION['pass']))){
     header('Location: logout.php');
@@ -30,30 +33,39 @@ include_once("./assets/api/datos.php");
     <script src="./assets/js/bootstrap.min.js"></script>
     <script src="./assets/js/all.min.js"></script>
     <script src="./assets/js/fontawesome.min.js"></script>
+    <script src="./assets/js/principal.js"></script>
     <title>Principal</title>
+    <script>
+        
+        
+
+        // function btndata(){
+        //     datos.style.visibility = "visible";
+        //     llamadas.style.visibility = "hidden";
+        //     sms.style.visibility = "hidden";
+        // }
+        // function btncalls(){
+        //     llamadas.style.visibility = "visible";
+        //     datos.style.visibility = "hidden";
+        //     sms.style.visibility = "hidden";
+        // }
+        // function btnmessages(){
+        //     sms.style.visibility = "visible";
+        //     llamadas.style.visibility = "hidden";
+        //     datos.style.visibility = "hidden";
+        // }
+    </script>
+
 </head>
 <body>
     <?php include_once("./templates/cabecera.php"); ?>
     <?php include_once("./templates/botonescabecera.php"); ?>
     
-    <section class="datos llamada">
-        <?php include_once("./templates/datos.php"); ?>
-        <?php include_once("./templates/llamadas.php"); ?>
-        <?php include_once("./templates/sms.php"); ?>
+    
+    <?php include_once("./templates/llamadas.php"); ?>
+    <?php include_once("./templates/datos.php"); ?>
+    <?php include_once("./templates/sms.php"); ?>
         
-    </section>
-    
-    
-    <script>
-        window.onload = function(){
-            var llamadas = document.getElementById("llamadas");
-            var datos = document.getElementById("datos");
-            var datos = document.getElementById("sms");
-            llamadas.style.display = "none";
-            datos.style.display = "none";
-            sms.style.display = "none";
-        }
-      
-    </script>
+        
 </body>
 </html>

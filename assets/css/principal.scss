@@ -1,0 +1,62 @@
+body {
+    border: 1px solid darkblue;
+}
+
+.cabecera {
+    width: 100%;
+    background-color: #10b0e6;
+    height: 150px;
+
+    #logo {
+        margin: 0.6rem;
+        width: 100px;
+        float: left;
+        border-radius: 50%;
+        box-shadow: 0 0 1px 1px lightgreen;
+    }
+}
+
+.resumen {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: lightblue;
+    height: auto;
+
+    div {
+        margin: auto;
+        text-align: center;
+
+        svg {
+            width: 2rem;
+            height: 2rem;
+            color: blue;
+            padding: 1rem 1rem 1rem 0;
+        }
+    }
+}
+
+.datos {
+    width: 100%;
+    background-color: snow;
+    padding: 1rem 2rem;
+}
+
+.foot {
+    width: 100%;
+    height: 150px;
+    background-color: lightpink;
+    padding-left: 0;
+
+    svg {
+        width: 2rem;
+        height: 2rem;
+        color: blue;
+        padding: 1rem 1rem 1rem 0;
+    }
+
+}
+
+.iconheader {
+    width: 33.33%;
+}

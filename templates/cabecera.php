@@ -1,19 +1,36 @@
 
-<section class="cabecera">
+<section class="cabecera row">
     <!-- log, cabecera número de línea y búsqueda y perfil -->
-    <div class="logo">
+    <h3 align="center">Consumo actual</h3>
+    <div class="logo col-3 col-sm-3">
         <img src="./assets/img/logo.png" alt="logo" id="logo">
-        <h1>Consumo actual</h1>
-
-        <select name="lineaActiva" id="lineaActiva">';
-            <?php $lineas = contratos($_SESSION['clienteid']);
-            foreach ($lineas as $linea) { ?>
-                <option value="<?= $linea; ?>"  onchange="numTelefono()"><?= $linea; ?></option>';
-            <?php } ?>
-                
-        </select>
     </div>
-    <p align="right">
-        <a href="logout.php"><button type="button" class="btn btn-primary">Logout</button></a>
-    </p>
+    <div class="col-6 col-sm-6">
+            <div align="center">
+                <select name="lineaActiva" id="lineaActiva" onchange="numTelefono(this)">
+                    <?php $lineas = contratos($_SESSION['clienteid']);
+                foreach ($lineas as $linea) { ?>
+                    <option value="<?= $linea; ?>"><?= $linea; ?></option>
+                    <?php } ?>
+                    
+                </select>
+            </div>
+    </div>
+    <div class="col-3 col-sm-3">
+    <!-- menú nav con submenu -->
+
+
+    <nav id="menuprincipal">
+        <ul class="row">
+            <li class="col-3"><a href="profile"><i class="fas fa-user"></i></a></li>
+            <li class="col-3"><a href="logout"><i class="fas fa-close"></i></a></li>
+        </ul>
+    </nav>
+    </div>
+        
 </section>
+<script>
+    function numTelefono(numTel){
+        
+    }
+</script>

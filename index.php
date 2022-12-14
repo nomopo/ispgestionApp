@@ -18,10 +18,10 @@ if (isset($_POST['user']) && isset($_POST['pass'])) {
     $_SESSION['nombre'] = $datosDB['nombre'];
     $_SESSION['clienteid'] = $datosDB['clienteid'];
 
-    header("Location: principal.php");
+    header("Location: principal");
 
   }else{
-    header("Location: logout.php");
+    header("Location: logout");
   }
   echo $post_user;
   echo "<br>";

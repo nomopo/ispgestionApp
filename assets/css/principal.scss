@@ -3,16 +3,17 @@ body {
 }
 
 .cabecera {
-    width: 100%;
+
     background-color: #10b0e6;
-    height: 150px;
+    height: 20%;
 
     #logo {
-        margin: 0.6rem;
-        width: 100px;
-        float: left;
-        border-radius: 50%;
-        box-shadow: 0 0 1px 1px lightgreen;
+        position: relative;
+        width: 9vh;
+        margin: -40px 10px 5px 10px;
+    }
+    a{
+        color: snow;
     }
 }
 
@@ -59,4 +60,39 @@ body {
 
 .iconheader {
     width: 33.33%;
+}
+#lineaActiva{
+    border-radius: 5px;
+    font-size: 1.2rem;
+    background-color: transparent;
+    border: none;
+    text-decoration: none;
+    #lineaActiva:focus{
+        box-shadow: 3px 3px red, -1em 0 0.4em olive;  
+        border: none;
+        text-decoration: none; 
+    }
+}
+#menuprincipal{
+    background-color: #10b0e6;
+    height: 50px;
+    width: 100%;
+    padding: 0;
+    margin: -30px -10px 0 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    li{
+
+        list-style: none;
+    }
+}
+.iconheader:hover{
+    cursor: pointer;
+}
+.sectiondatos{
+    background-color: lightgoldenrodyellow;
+}
+.sectionsms{
+    background-color: lightcoral;
 }

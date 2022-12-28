@@ -1,7 +1,6 @@
 <section class="resumen row"> 
 <!-- Datos resumen, costes y fechas y filtro datos, llamadas, sms, otros -->
-<div class="iconheader" id="btnLlamadas" onclick="btncalls()"><i class="fa-solid fa-phone-volume"></i></div>
-        <div class="iconheader" id="btnDatos" onclick="btndata()"><i class="fa-solid fa-database"></i></div>
-        <div class="iconheader" id="btnSMS" onclick="btnmessages()"><i class="fa-solid fa-envelope"></i></div>
-            
+        <div class="iconheader" id="btnLlamadas" onclick="mostrarLlamadas()"><i class="fas fa-phone-volume" id="illamada"></i></div>
+        <div class="iconheader" id="btnDatos" onclick="mostrarDatos()"><i class="fas fa-database" id="idatos"></i></div>
+        <div class="iconheader" id="btnSms" onclick="mostrarSms()"><i class="fas fa-envelope" id="isms"></i></div>    
 </section>

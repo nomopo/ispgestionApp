@@ -1,46 +1,40 @@
-<?php
-//echo cdr('644982392',3);
-function cdr($tel,$tipo){
-    $error = "";
-    $mes = date("m");
-    $anio = date("Y");
-    $ch = curl_init();
-    curl_setopt($ch, CURLOPT_USERPWD, "API DEV:5Enube@2018");
-    //curl_setopt($ch,CURLOPT_URL,"https://citra.ispgestion.com/api/cdr/p/".$linea."?mes=".$mes."&anio=".$anio."&tipo=4");
-    curl_setopt($ch,CURLOPT_URL,"https://citra.ispgestion.com/api/cdr/p/".$tel."?mes=".$mes."&anio=".$anio."&tipo=".$tipo);
-    curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 2);
-    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, true);
-    curl_setopt($ch, CURLOPT_FAILONERROR, false);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    $json = curl_exec($ch);
-    $error = curl_errno($ch);
-    if ($error) {
-        echo "Error: " . $error;
-        die();
-    } else {
-        curl_close($ch);
-    }
-    return $json;
-}
-function diafindemes(){
-    $mes = date("m");
-    $anio = date("Y");
-    $dia = date("d");
-    $dias = cal_days_in_month(CAL_GREGORIAN, $mes, $anio);
-    $fecha = $dias;
-    return $fecha;
-}
-// $linea1 = json_decode(cdr("644982392"), true);
-// foreach ($linea1 as $llamadas) {
-//     # code...
-//     echo $llamadas['fecha']." / ".$llamadas['hora']."                 ";
-//     echo $llamadas['destino']." | ".$llamadas['precio_real']."€";
-//     echo "<br>";
-// }
-$calls = cdr('644982392',1);
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+    <script>
+      // Primero, obtén una referencia al elemento canvas
+      const canvas = document.getElementById('chart');
 
-$llamadas = json_decode($calls, true);
-foreach ($llamadas as $llamada) {
-    # code...
-    echo $llamada['destino']."<br>";
-}
+      // Luego, especifica los datos y las opciones para el gráfico
+      const data = {
+        labels: ['Opción 1', 'Opción 2', 'Opción 3'],
+        datasets: [{
+          data: [50, 25, 25], // valores para cada opción
+          backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56'] // colores para cada opción
+        }]
+      };
+
+      const options = {
+        cutoutPercentage: 50, // porcentaje de la circunferencia que se debe cortar
+        rotation: -0.5 * Math.PI, // rotación inicial del gráfico en radianes
+        circumference: Math.PI // longitud de la circunferencia del gráfico en radianes
+      };
+
+      // Finalmente, crea el gráfico usando la biblioteca Chart.js
+      const chart = new Chart(canvas, {
+        type: 'doughnut', // tipo de gráfico (anillo)
+        data: data,
+        options: options
+      });
+
+    </script>
+</head>
+<body>
+    <div id="chart"></div>
+</body>
+</html>

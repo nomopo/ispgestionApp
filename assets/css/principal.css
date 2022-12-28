@@ -83,14 +83,44 @@ body {
   list-style: none;
 }
 
-.iconheader:hover {
+#btnLlamadas:hover {
   cursor: pointer;
+  background-color: snow;
 }
 
-.sectiondatos {
-  background-color: lightgoldenrodyellow;
+#btnDatos:hover {
+  cursor: pointer;
+  background-color: snow;
 }
 
-.sectionsms {
+#btnSMS:hover {
+  cursor: pointer;
+  background-color: snow;
+}
+
+#sectionsms {
   background-color: lightcoral;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+#sectionllamadas {
+  background-color: lightgreen;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+#sectiondatos {
+  background-color: lightyellow;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+table thead {
+  text-align: center;
+  text-transform: uppercase;
+}
+table tbody tr td {
+  padding: 0 10px;
+  font-size: 10px;
 }/*# sourceMappingURL=principal.css.map */

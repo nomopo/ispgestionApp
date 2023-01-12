@@ -2,9 +2,9 @@
 //echo cdr('644982392',3);
 function tarifa($telefono){
 
-    ini_set('display_errors', '1');
-    ini_set('display_startup_errors', '1');
-    error_reporting(E_ALL);    
+    // ini_set('display_errors', '1');
+    // ini_set('display_startup_errors', '1');
+    // error_reporting(E_ALL);    
     //$telefono = "644982392";
     $host ="consumos.citratel.com";
     $user = "citra_conDatos";

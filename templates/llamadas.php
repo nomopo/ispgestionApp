@@ -28,7 +28,7 @@
             </table>
         <?php
         }else{
-            echo "No hay llamadas realizadas";
+            echo "<p align='center'>No hay llamadas realizadas</p>";
         }
         ?>
     </div>

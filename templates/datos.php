@@ -21,13 +21,14 @@
                         <td align="center"><?= $dato['hora']; ?></td>
                         <td align="center"><?= round(($dato['duracion']/1048576),2). "Mb"; ?></td>
                         <td align="center"><?= $dato['precio_real']."€"; ?></td>
+                        <?php $costeExtra += $dato['precio_real']; ?>
                     </tr> <?php
                     } ?>
                 </tbody>
             </table>
             <?php 
         }else{
-            echo "No hay datos consumidos";
+            echo "<p align='center'>No hay datos consumidos</p>";
         } ?>
     </div>
 </section>

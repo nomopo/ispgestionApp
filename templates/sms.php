@@ -1,7 +1,7 @@
  <!-- Mostrar datos de sms -->
 <section class="sectionsms" id="sectionsms" name="sectionsms">
     <div class='row' id='sms' name="sms">
-                <?php $smss = json_decode(datos('644982392',2), true);
+                <?php $smss = json_decode(datos($lineaSeleccionada,2), true);
                 if($smss != null){ ?>
                     <table class='table table-striped table-bordered table-hover table-sm'>
                         <thead class='thead-dark'>
@@ -28,7 +28,7 @@
                     </table>
                 <?php 
                 }else{
-                        echo "No hay SMS enviados";
+                    echo "<p align='center'>No hay SMS enviados</p>";
                 }
                 ?>
     </div>

@@ -59,7 +59,7 @@ body {
 }
 
 .iconheader {
-    width: 33.33%;
+    width: 25%;
 }
 #lineaActiva{
     border-radius: 5px;
@@ -101,6 +101,10 @@ body {
     cursor: pointer;
     background-color: snow;
 }
+#btnFacturas:hover{
+    cursor: pointer;
+    background-color: snow;
+}
 #sectionsms{
     background-color: lightcoral;
     margin: 0 auto;
@@ -116,6 +120,15 @@ body {
     margin: 0 auto;
     padding: 0 10px;
 }
+#sectionfacturas{
+    background-color: lightcyan;
+    margin: 0 auto;
+    padding: 0 10px;
+    text-size: 16px;
+    .svg-inline--fa{
+        color: green;
+    }
+}
 table{ 
     thead{
         text-align: center;
@@ -124,5 +137,18 @@ table{
     tbody tr td{
         padding: 0 10px;
         font-size: 10px;
+    }
+}
+.graficas{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px auto;
+    text-align: center;
+    .grafica1{
+
+    }
+    .grafica2{
+
     }
 }

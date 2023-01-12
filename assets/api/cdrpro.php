@@ -1,5 +1,4 @@
 <?php
-echo cdr('644982392',3);
 function cdr($tel,$tipo){
     $error = "";
     $mes = date("m");

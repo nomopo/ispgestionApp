@@ -9,6 +9,8 @@ if((!isset($_SESSION['user'])) ||(!isset($_SESSION['pass'])) || (!isset($_SESSIO
 include_once("./assets/api/contratosCliente.php");
 include_once("./assets/api/cdr.php");
 include_once("./assets/api/datos.php");
+include_once("./assets/api/facturas.php");
+
 //include_once('./assets/api/tarifas.php');
 // echo "La variable user en sesion es: ".$_SESSION['user'];
 // echo "<br>";
@@ -65,14 +67,32 @@ include_once("./assets/api/datos.php");
     <?php include_once("./templates/llamadas.php"); ?>
     <?php include_once("./templates/datos.php"); ?>
     <?php include_once("./templates/sms.php"); ?>
+    <?php include_once("./templates/facturas.php"); ?>
 
+        
     <script>
         document.getElementById("sectionllamadas").style.display = "block";
         document.getElementById("sectionsms").style.display = "none";
         document.getElementById("sectiondatos").style.display = "none";
+        document.getElementById("sectionfacturas").style.display = "none";
         $(document).ready(function () {
             //$(".dial").knob();
-            $(".dial").knob({
+            $(".dial1").knob({
+                min: 0,
+                max: 100,
+                width: 150,
+                height: 150,
+                displayInput: true,
+                fgColor: "#10b0e6",
+                release: function (v) {
+                    $("p").text(v);
+                },
+                readOnly: true,
+            });
+        });
+        $(document).ready(function () {
+            //$(".dial").knob();
+            $(".dial2").knob({
                 min: 0,
                 max: 100,
                 width: 150,

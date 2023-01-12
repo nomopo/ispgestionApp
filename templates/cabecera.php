@@ -1,4 +1,6 @@
-
+<?php
+$costeExtra = 0;
+?>
 <section class="cabecera row">
     <!-- log, cabecera número de línea y búsqueda y perfil -->
     <h3 align="center">Consumo actual</h3>

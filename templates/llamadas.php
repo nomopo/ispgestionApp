@@ -17,7 +17,11 @@
                     <?php 
                     foreach ($llamadas as $llamada) { ?>
                     <tr>
-                        <td align="center"><?= $llamada['fecha']; ?></td>
+                        <?php 
+                            $fechaSpanish = $llamada['fecha'];
+                            $fecha =  date("d/m/Y",strtotime($fechaSpanish));
+                        ?>
+                        <td align="center"><?= $fecha; ?></td>
                         <td align="center"><?= $llamada['hora']; ?></td>
                         <td align="center"><?= $llamada['duracion']; ?></td>
                         <td align="center"><?= $llamada['destino']; ?></td>

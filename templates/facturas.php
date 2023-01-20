@@ -16,7 +16,11 @@
                     <?php
                     foreach ($facturas as $dato) { ?>
                     <tr>
-                        <td align="center"><?= $dato['fecha']; ?></td>
+                        <?php 
+                            $fechaSpanish = $dato['fecha'];
+                            $fecha =  date("d/m/Y",strtotime($fechaSpanish));
+                        ?>
+                        <td align="center"><?= $fecha; ?></td>
                         <td align="center"><?= $dato['factura']; ?></td>
                         <td align="center"><?= $dato['total']."€"; ?></td>
                         <td align="center"><a href="assets/api/descargarFactura.php?factura=<?= $dato['id'] ?>" target='_blank'><i class="fa-solid fa-cloud-arrow-down fa-2x"></i></a></td>

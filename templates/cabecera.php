@@ -50,8 +50,9 @@ $costeExtra = 0;
     <!-- menú nav con submenu -->
         <nav id="menuprincipal">
             <ul class="row">
-                <li class="col-3"><a href="profile"><i class="fas fa-user"></i></a></li>
-                <li class="col-3"><a href="logout"><i class="fas fa-close"></i></a></li>
+                <li class="col-3"><a href="#"><i class="fas fa-circle-exclamation"></i></a></li>
+                <li class="col-3"><a href="#"><i class="fas fa-user"></i></a></li>
+                <li class="col-3"><a href="logout"><i class="fas fa-arrow-right-from-bracket"></i></a></li>
             </ul>
         </nav>
     </div>

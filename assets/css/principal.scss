@@ -1,4 +1,10 @@
+@font-face {
+    font-family: 'HelveticaNeueRoman'; 
+    src: url("../fonts/HelveticaNeue-Roman.otf");
+    font-style: normal;
+}
 body {
+    font-family: 'HelveticaNeueRoman';
     border: 1px solid darkblue;
 }
 
@@ -9,7 +15,7 @@ body {
 
     #logo {
         position: relative;
-        width: 9vh;
+        width: 80px;
         margin: -40px 10px 5px 10px;
     }
     a{
@@ -21,7 +27,7 @@ body {
     width: 100%;
     padding: 0;
     margin: 0;
-    background-color: lightblue;
+    background-color: #10b0e6;
     height: auto;
 
     div {
@@ -31,7 +37,7 @@ body {
         svg {
             width: 2rem;
             height: 2rem;
-            color: blue;
+            color: snow;
             padding: 1rem 1rem 1rem 0;
         }
     }
@@ -50,8 +56,8 @@ body {
     padding-left: 0;
 
     svg {
-        width: 2rem;
-        height: 2rem;
+        width: 1rem;
+        height: 1rem;
         color: blue;
         padding: 1rem 1rem 1rem 0;
     }
@@ -59,13 +65,13 @@ body {
 }
 
 .iconheader {
-    width: 25%;
+    width: 20%;
 }
 #lineaActiva{
     border-radius: 5px;
     font-size: 1.2rem;
     background-color: transparent;
-    border: none;
+    border: 0.5px solid blue;
     text-decoration: none;
     #lineaActiva:focus{
         box-shadow: 3px 3px red, -1em 0 0.4em olive;  
@@ -87,43 +93,86 @@ body {
         list-style: none;
     }
 }
+#btnHome,#btnLlamadas,#btnDatos,#btnSms,#btnFacturas{
+    border-radius: 7px 7px 0 0;
+}
+#btnHome:hover{
+    cursor: pointer;
+    // background-color: snow;
+    // svg{
+    //     color: #10b0e6;
+    // }
+}
 #btnLlamadas:hover{
     cursor: pointer;
-    background-color: snow;
+    // background-color: snow;
+    // svg{
+    //     color: #10b0e6;
+    // }
 }
 
 #btnDatos:hover{
     cursor: pointer;
-    background-color: snow;
+    // background-color: snow;
+    // svg{
+    //     color: #10b0e6;
+    // }
 }
 
-#btnSMS:hover{
+#btnSms:hover{
     cursor: pointer;
-    background-color: snow;
+    // background-color: snow;
+    // svg{
+    //     color: #10b0e6;
+    // }
 }
 #btnFacturas:hover{
     cursor: pointer;
-    background-color: snow;
+    // background-color: snow;
+    // svg{
+    //     color: #10b0e6;
+    // }
+}
+
+#sectionhome{
+    background-color: lightcyan;
+    margin: 0 auto;
+    padding: 0 10px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 500px;
 }
 #sectionsms{
-    background-color: lightcoral;
+    background-color: lightcyan;
     margin: 0 auto;
     padding: 0 10px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 500px;
 }
 #sectionllamadas{
-    background-color: lightgreen;
+    background-color: lightcyan;
     margin: 0 auto;
     padding: 0 10px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 500px;
 }
 #sectiondatos{
-    background-color: lightyellow;
+    background-color: lightcyan;
     margin: 0 auto;
     padding: 0 10px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 500px;
 }
 #sectionfacturas{
     background-color: lightcyan;
     margin: 0 auto;
     padding: 0 10px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 500px;
     text-size: 16px;
     .svg-inline--fa{
         color: green;

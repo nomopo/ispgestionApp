@@ -16,7 +16,11 @@
                                 <?php
                                 foreach ($smss as $sms) { ?>
                                 <tr>
-                                    <td align="center"><?= $sms['fecha']; ?></td>
+                                    <?php 
+                                        $fechaSpanish = $sms['fecha'];
+                                        $fecha =  date("d/m/Y",strtotime($fechaSpanish));
+                                    ?>
+                                    <td align="center"><?= $fecha; ?></td>
                                     <td align="center"><?= $sms['hora']; ?></td>
                                     <td align="center"><?= $sms['destino']; ?></td>
                                     <td align="center"><?= $sms['precio_real']."€"; ?></td>

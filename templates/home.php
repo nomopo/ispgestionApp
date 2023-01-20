@@ -1,6 +1,6 @@
 
 <!-- Mostrar consumos de datos -->
-<section class="sectiondatos" id="sectiondatos" name="sectiondatos">
+<section id="sectionhome" name="sectionhome" class="sectionhome">
     <div class='row' id='datos' name="datos">
         <?php $datos = json_decode(datos($lineaSeleccionada,3), true); 
         if($datos != null) { ?>

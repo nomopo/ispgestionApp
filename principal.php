@@ -39,6 +39,7 @@ include_once("./assets/api/facturas.php");
     <script src="./assets/js/principal.js"></script>
     <script src="./assets/js/jquery.js"></script>
     <script src="./assets/js/jquery.knob.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <style>
         .container {
             margin: 0 auto;
@@ -55,7 +56,7 @@ include_once("./assets/api/facturas.php");
             text-align: center;
         }
     </style>
-    <title>Principal</title>
+    <title>Tu CitraTel</title>
 
 
 </head>
@@ -64,6 +65,7 @@ include_once("./assets/api/facturas.php");
     <?php include_once("./templates/botonescabecera.php"); ?>
     
     <?php include_once("./templates/graficaconsumos.php"); ?>
+    <?php include_once("./templates/home.php"); ?>
     <?php include_once("./templates/llamadas.php"); ?>
     <?php include_once("./templates/datos.php"); ?>
     <?php include_once("./templates/sms.php"); ?>
@@ -72,6 +74,7 @@ include_once("./assets/api/facturas.php");
         
     <script>
         document.getElementById("sectionllamadas").style.display = "block";
+        document.getElementById("sectionhome").style.display = "none";
         document.getElementById("sectionsms").style.display = "none";
         document.getElementById("sectiondatos").style.display = "none";
         document.getElementById("sectionfacturas").style.display = "none";

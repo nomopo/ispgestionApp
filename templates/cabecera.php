@@ -3,7 +3,6 @@ $costeExtra = 0;
 ?>
 <section class="cabecera row">
     <!-- log, cabecera número de línea y búsqueda y perfil -->
-    <h3 align="center">Consumo actual</h3>
     <div class="logo col-3 col-sm-3">
         <img src="./assets/img/logo.png" alt="logo" id="logo">
     </div>

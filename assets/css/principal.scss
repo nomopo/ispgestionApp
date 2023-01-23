@@ -9,9 +9,9 @@ body {
 }
 
 .cabecera {
-
     background-color: #10b0e6;
     height: 20%;
+    padding-top: 45px;
 
     #logo {
         position: relative;
@@ -69,15 +69,12 @@ body {
 }
 #lineaActiva{
     border-radius: 5px;
-    font-size: 1.2rem;
+    font-size: 1.8rem;
     background-color: transparent;
-    border: 0.5px solid blue;
-    text-decoration: none;
-    #lineaActiva:focus{
-        box-shadow: 3px 3px red, -1em 0 0.4em olive;  
-        border: none;
-        text-decoration: none; 
-    }
+    border: 0.5px solid snow;
+    color: snow;
+    margin-top: -15px;
+
 }
 #menuprincipal{
     background-color: #10b0e6;
@@ -96,13 +93,13 @@ body {
 #btnHome,#btnLlamadas,#btnDatos,#btnSms,#btnFacturas{
     border-radius: 7px 7px 0 0;
 }
-#btnHome:hover{
-    cursor: pointer;
-    // background-color: snow;
-    // svg{
-    //     color: #10b0e6;
-    // }
-}
+// #btnHome:hover{
+//     cursor: pointer;
+//     // background-color: snow;
+//     // svg{
+//     //     color: #10b0e6;
+//     // }
+// }
 #btnLlamadas:hover{
     cursor: pointer;
     // background-color: snow;
@@ -134,14 +131,14 @@ body {
     // }
 }
 
-#sectionhome{
-    background-color: lightcyan;
-    margin: 0 auto;
-    padding: 0 10px;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    height: 500px;
-}
+// #sectionhome{
+//     background-color: lightcyan;
+//     margin: 0 auto;
+//     padding: 0 10px;
+//     overflow-y: scroll;
+//     overflow-x: hidden;
+//     height: 500px;
+// }
 #sectionsms{
     background-color: lightcyan;
     margin: 0 auto;
@@ -175,7 +172,11 @@ body {
     height: 500px;
     text-size: 16px;
     .svg-inline--fa{
-        color: green;
+        color: #10B0E6;
+        cursor:pointer;
+    }
+    .svg-inline--fa:hover{
+        color: cyan;
     }
 }
 table{ 
@@ -190,14 +191,16 @@ table{
 }
 .graficas{
     display: flex;
+    flex-direction: row;
     justify-content: space-around;
-    align-items: center;
-    margin: 10px auto;
-    text-align: center;
-    .grafica1{
+    margin: 0 -50px;
+    width: 100%;
 
-    }
-    .grafica2{
-
-    }
+    #chart1, #chart2 {
+        margin: 0;
+        padding: 0;
+        width: 40%;
+        flex-direction: column;
+        justify-content: space-around;    
+    }     
 }

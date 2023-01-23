@@ -51,15 +51,14 @@ if (isset($_POST['user']) && isset($_POST['pass'])) {
     <span class="mdi mdi-menu menu"></span>
   </div>
 </header>
+<picture><img src="assets/img/logo.png" alt="Tu CitraTel"></picture>
 <form action="index.php" method="post" name="login" id="login" class="gridform">
   <span class="mdi mdi-account"></span>
   <input type="text" name="user" id="user" placeholder="Username">
   <input type="password" name="pass" id="pass" placeholder="Password">
   <input type="submit" value="Enviar" class="btn btn-info button">
-  <a href="recovery.php">Olvidé la contraseña</a>
-   </form>
 
-</form>
+   </form>
 <footer>
   <div class="degradadoAzulFooter"></div>
 </footer>

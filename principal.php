@@ -39,23 +39,8 @@ include_once("./assets/api/facturas.php");
     <script src="./assets/js/principal.js"></script>
     <script src="./assets/js/jquery.js"></script>
     <script src="./assets/js/jquery.knob.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-    <style>
-        .container {
-            margin: 0 auto;
-            text-align: center;
-        }
-        h2 {
-            font-family: "raleway";
-            font-size: 28px;
-            margin-bottom: 10px;
-        }
-        .container h2 input {
-            margin: 0 auto;
-            font-size: 18px;
-            text-align: center;
-        }
-    </style>
+    <script src="./assets/js/apexcharts.js"></script>
+    
     <title>Tu CitraTel</title>
 
 
@@ -73,41 +58,12 @@ include_once("./assets/api/facturas.php");
 
         
     <script>
-        document.getElementById("sectionllamadas").style.display = "block";
+        document.getElementById("sectiondatos").style.display = "block";
+        document.getElementById("sectionllamadas").style.display = "none";
         document.getElementById("sectionhome").style.display = "none";
         document.getElementById("sectionsms").style.display = "none";
-        document.getElementById("sectiondatos").style.display = "none";
         document.getElementById("sectionfacturas").style.display = "none";
-        $(document).ready(function () {
-            //$(".dial").knob();
-            $(".dial1").knob({
-                min: 0,
-                max: 100,
-                width: 150,
-                height: 150,
-                displayInput: true,
-                fgColor: "#10b0e6",
-                release: function (v) {
-                    $("p").text(v);
-                },
-                readOnly: true,
-            });
-        });
-        $(document).ready(function () {
-            //$(".dial").knob();
-            $(".dial2").knob({
-                min: 0,
-                max: 100,
-                width: 150,
-                height: 150,
-                displayInput: true,
-                fgColor: "#10b0e6",
-                release: function (v) {
-                    $("p").text(v);
-                },
-                readOnly: true,
-            });
-        });
+        
     </script>
 </body>
 </html>

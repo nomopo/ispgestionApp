@@ -2,10 +2,16 @@ body {
   background-color: snow;
 }
 
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .degradadoAzulHeader {
   background: linear-gradient(338.69deg, #01B1E6 29833.92%, #01B1E6 56279.86%);
   height: 50px;
-  width: 100%;
+  width: 99%;
   border-radius: 15px 15px 0px 0px;
   padding: 0.3rem;
 }
@@ -13,10 +19,10 @@ body {
 .degradadoAzulFooter {
   background: linear-gradient(338.69deg, #01B1E6 29833.92%, #01B1E6 56279.86%);
   height: 50px;
-  width: 100%;
+  width: 97%;
   border-radius: 0px 0px 15px 15px;
   padding: 0.3rem;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   height: 50px;
 }
@@ -24,26 +30,25 @@ body {
 #login {
   text-align: center;
   line-height: 2rem;
-  margin: auto auto;
+  margin: -10px auto;
   max-width: 30rem;
-  padding-top: 3rem;
 }
 
 #login input {
   border-radius: 50px;
-  margin: 0.8rem;
+  margin: 0.8rem auto;
   padding: 0.3rem 0.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 80%;
   border-color: #01B1E6;
 }
 
 #login .button {
   background-color: #01B1E6;
   color: snow;
-  width: 100%;
+  width: 50%;
   border: 1px solid gray;
 }
 
@@ -69,18 +74,30 @@ body {
   font-size: 2rem;
 }
 
-@media screen and (max-width: 300px) {
+picture {
+  display: flex;
+  align-items: center;
+}
+picture img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: auto;
+  width: 100px;
+  z-index: 9;
+}
+
+@media screen and (width: 2048px) {
   .degradadoAzulHeader {
     background: linear-gradient(338.69deg, #01B1E6 29833.92%, #01B1E6 56279.86%);
     height: 50px;
-    width: 100%;
+    width: 99%;
     border-radius: 15px 15px 0px 0px;
     padding: 0.3rem;
   }
   .degradadoAzulFooter {
     background: linear-gradient(338.69deg, #01B1E6 29833.92%, #01B1E6 56279.86%);
     height: 50px;
-    width: 100%;
+    width: 96%;
     border-radius: 0px 0px 15px 15px;
     padding: 0.3rem;
   }
@@ -96,13 +113,16 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    line-height: 1.5rem;
     width: 90%;
     border-color: #01B1E6;
   }
   #login .button {
     background-color: #01B1E6;
     color: snow;
-    width: 100%;
+    width: 50%;
+    margin: 0 auto;
+    line-height: 1.5rem;
     border: 1px solid gray;
   }
 } /*# sourceMappingURL=login.css.map *//*# sourceMappingURL=login.css.map */
